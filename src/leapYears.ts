@@ -1,7 +1,7 @@
-export const leapYears = (year: number) => {
-  if (year % 400 === 0) {
+export const leapYears = (year: number): boolean => {
+  if (year % 400 === 0 || year % 4 === 0 && year % 100 !== 0 ) {
     return true 
-  } else if (year % 100 === 0 && year % 400 !== 0) { 
+  } else { 
     return false 
   }
-}
+};
